@@ -1,0 +1,62 @@
+{
+  "-NyBp3SP--1HbwLxBrQo": {
+    "id": "NyBp3SP--1HbwLxBrQo",
+    "name": "White Rastafarian",
+    "description": "This problem is located on a large boulder at the Southeast end of Rock Hudson. Climb a juggy crack on an overhanging arete until it dies out 15 ft. up. Lean out left, onto the overhanging face, to a large flake. Finishes with an easy mantel 25 ft. off the deck. One of JTree's finest problems.",
+    "location": "Joshua Tree, California",
+    "uid": 46,
+    "image": "https://mountainproject.com/assets/photos/climb/114202430_medium_1522344758.jpg?cache=1713394928",
+    "favorite": false,
+    "completed": true,
+    "grade": "V2",
+    "date": "9/20/2024"
+  },
+  "-NyBp3SR46644nQcU1cr": {
+    "id": "-NyBp3SR46644nQcU1cr",
+    "name": "House of Leaves",
+    "description": "Climb Red House Extension, but don't rock over to the right of the boulder. Instead, utilize a pinch to make a long standup move, and then get a great heel hook that feels much less secure than it actually is. Rock up to a sidepull and make a committing move out left to an incut rail, and finish up the easy topout. This is the same grade as Red House Extension, but adds quite a few more V4-ish moves, and topping out can be scary. A very proud line, and one of the most classic at Stone Fort!",
+    "location": "Little Rock City, Tennesee",
+    "uid": 9,
+    "image": "https://27crags.s3.amazonaws.com/photos/000/201/201129/size_xl-27d58c253425.jpg",
+    "favorite": false,
+    "completed": false,
+    "grade": "V8",
+    "date": "9/11/2022"
+  },
+  "-NyBp3STzYBhHTnCfTf6": {
+    "id": "-NyBp3STzYBhHTnCfTf6",
+    "name": "Banshee",
+    "description": "Anchor your belayer and step out over the void, follow bolts up and right to a huge hueco. Sit down and ponder the meaning of life. Exit the hueco and make difficult moves up and right to a second hueco (Abiyoyo 5.12b heads up and left from the first hueco). Sit down and ponder why we climb. Exit the hueco and follow jugs to the anchor",
+    "location": "Red River Gorge, Kentucky",
+    "uid": 32,
+    "image": "https://mountainproject.com/assets/photos/climb/116494631_medium_1548739731.jpg?cache=1694783602",
+    "favorite": false,
+    "completed": true,
+    "grade": "5.11c",
+    "date": "10/12/2023"
+  },
+  "-NyBp3SVosv4YX4KIVN9": {
+    "id": "-NyBp3SVosv4YX4KIVN9",
+    "name": "Iron Man",
+    "description": "Sit start to a sloping edge then follow the jugs to the top",
+    "location": "Wartburg, Tennessee",
+    "uid": 60,
+    "image": "https://mountainproject.com/assets/photos/climb/123087845_medium_1663603516_topo.jpg?cache=1664825002",
+    "favorite": true,
+    "completed": true,
+    "grade": "V3",
+    "date": "7/8/2022"
+  },
+  "-NyBp3SWpZH8qrDwOLzu": {
+    "id": "-NyBp3SWpZH8qrDwOLzu",
+    "name": "Moonshine Left",
+    "description": "This less popular Moonshine route is just as classic as the others imo. Be prepared for a stout grade and quite a pump for a boulder problem. Start in the shared pockets with the V4 'Moonshine Roof', and climb onto the diving board. Where 'Moonshine Roof' breaks right continue straight and around the corner thru challenging beta intensive moves. Get established under the final roof with a good left hand and enter the crux pulling over the final lip to good holds above. Some toe hook trickey can help to get matched on the final holds before the move to the jugs leading to the topout.",
+    "location": "Hueco Tanks State Park, Texas",
+    "uid": 54,
+    "image": "https://mountainproject.com/assets/photos/climb/108275132_medium_1494273370.jpg?cache=1701318160",
+    "favorite": false,
+    "completed": true,
+    "grade": "V6",
+    "date": "2/14/2024"
+  }
+}
