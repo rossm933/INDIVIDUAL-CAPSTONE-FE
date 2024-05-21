@@ -126,6 +126,15 @@ function ClimbForm({ obj }) {
           <option value="V8">V8</option>
           <option value="V9">V9</option>
           <option value="V10">V10</option>
+          <option value="5.6">5.6</option>
+          <option value="5.7">5.7</option>
+          <option value="5.8">5.8</option>
+          <option value="5.9">5.9</option>
+          <option value="5.10">5.10</option>
+          <option value="5.11">5.11</option>
+          <option value="5.12">5.12</option>
+          <option value="5.13">5.13</option>
+          <option value="5.14">5.14</option>
         </Form.Select>
       </FloatingLabel>
 
