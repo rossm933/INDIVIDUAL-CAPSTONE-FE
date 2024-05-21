@@ -18,6 +18,7 @@ function ClimbCard({ climbObj, onUpdate }) {
       deleteClimb(climbObj.firebaseKey).then(() => onUpdate());
     }
   };
+  console.warn(climbObj);
 
   return (
     <Card style={{ width: '18rem', margin: '10px' }}>
