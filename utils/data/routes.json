@@ -7,9 +7,9 @@
     "uid": "Zqhuxh1bHWMPX5ps8sWhyPGG0UB2",
     "image": "https://external-preview.redd.it/X2k4S6CL-u2YomOTD5hz4qirolj3FQyf--Xgw1u1CpA.jpg?auto=webp&s=5104bd9523a10671c9c92e5644827566d2801cf9",
     "favorite": false,
-    "completed": true,
+    "sent": true,
     "grade": "V2",
-    "date": "9/20/2024"
+    "timeStamp": "Mon Jun 24 2023 16:03:24"
   },
   "-NyBp3SR46644nQcU1cr": {
     "firebaseKey": "-NyBp3SR46644nQcU1cr",
@@ -19,9 +19,9 @@
     "uid": "Zqhuxh1bHWMPX5ps8sWhyPGG0UB2",
     "image": "https://27crags.s3.amazonaws.com/photos/000/201/201129/size_xl-27d58c253425.jpg",
     "favorite": false,
-    "completed": false,
+    "sent": false,
     "grade": "V8",
-    "date": "9/11/2022"
+    "timeStamp": "Fri Jul 28 2023 22:33:16"
   },
   "-NyBp3STzYBhHTnCfTf6": {
     "firebaseKey": "-NyBp3STzYBhHTnCfTf6",
@@ -31,9 +31,9 @@
     "uid": "Zqhuxh1bHWMPX5ps8sWhyPGG0UB2",
     "image": "https://mountainproject.com/assets/photos/climb/116494631_medium_1548739731.jpg?cache=1694783602",
     "favorite": false,
-    "completed": true,
+    "sent": true,
     "grade": "5.11c",
-    "date": "10/12/2023"
+    "timeStamp": "Fri Dec 15 2023 12:14:34 "
   },
   "-NyBp3SVosv4YX4KIVN9": {
     "firebaseKey": "-NyBp3SVosv4YX4KIVN9",
@@ -43,9 +43,9 @@
     "uid": "Zqhuxh1bHWMPX5ps8sWhyPGG0UB2",
     "image": "https://mountainproject.com/assets/photos/climb/123087845_medium_1663603516_topo.jpg?cache=1664825002",
     "favorite": true,
-    "completed": true,
+    "sent": true,
     "grade": "V3",
-    "date": "7/8/2022"
+    "timeStamp": "Mon Nov 13 2023 14:37:23"
   },
   "-NyBp3SWpZH8qrDwOLzu": {
     "firebaseKey": "-NyBp3SWpZH8qrDwOLzu",
@@ -55,8 +55,8 @@
     "uid": "Zqhuxh1bHWMPX5ps8sWhyPGG0UB2",
     "image": "https://mountainproject.com/assets/photos/climb/108275132_medium_1494273370.jpg?cache=1701318160",
     "favorite": false,
-    "completed": true,
+    "sent": true,
     "grade": "V6",
-    "date": "2/14/2024"
+    "timeStamp": "Wed Feb 17 2024 10:48:33"
   }
 }

@@ -13,21 +13,29 @@ function ClimbCard({ climbObj, onUpdate }) {
       updateClimb({ ...climbObj, favorite: true }).then(onUpdate);
     }
   };
+
+  const toggleSent = () => {
+    if (climbObj.sent) {
+      updateClimb({ ...climbObj, sent: false }).then(onUpdate);
+    } else {
+      updateClimb({ ...climbObj, sent: true }).then(onUpdate);
+    }
+  };
+
   const deleteThisClimb = () => {
     if (window.confirm(`Delete ${climbObj.name}?`)) {
       deleteClimb(climbObj.firebaseKey).then(() => onUpdate());
     }
   };
-  console.warn(climbObj);
 
   return (
     <Card style={{ width: '18rem', margin: '10px' }}>
       <Card.Img variant="top" src={climbObj.image} alt={climbObj.name} style={{ height: '400px' }} />
       <Card.Body>
-        <Card.Title>{climbObj.name}</Card.Title>
-        <Card.Text>{climbObj.grade}</Card.Text>
-        <Button onClick={toggleFavorite}><span>{climbObj.favorite ? '❤️' : '🤍'}</span></Button>
-        <Card.Text>Date Created: </Card.Text>
+        <Card.Title><Button onClick={toggleFavorite}><span>{climbObj.favorite ? '❤️' : '🤍'}</span></Button> Name: {climbObj.name}</Card.Title>
+        <Button onClick={toggleSent}><span>Sent? {climbObj.sent ? 'Yes' : 'No'}</span></Button>
+        <Card.Text>Grade: {climbObj.grade}</Card.Text>
+        <Card.Text>Date Created: {climbObj.timeStamp ? new Date(climbObj.timeStamp).toString().split(' G')[0] : ''}</Card.Text>
         {/* DYNAMIC LINK TO VIEW THE CLIMB DETAILS  */}
         <Link href={`/climbs/${climbObj.firebaseKey}`} passHref>
           <Button variant="primary" className="m-2">VIEW</Button>
@@ -51,6 +59,7 @@ ClimbCard.propTypes = {
     favorite: PropTypes.bool,
     sent: PropTypes.bool,
     grade: PropTypes.string,
+    timeStamp: PropTypes.string,
     firebaseKey: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
