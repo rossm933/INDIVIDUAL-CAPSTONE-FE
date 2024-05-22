@@ -18,7 +18,6 @@ function ClimbCard({ climbObj, onUpdate }) {
       deleteClimb(climbObj.firebaseKey).then(() => onUpdate());
     }
   };
-  console.warn(climbObj);
 
   return (
     <Card style={{ width: '18rem', margin: '10px' }}>
@@ -27,7 +26,7 @@ function ClimbCard({ climbObj, onUpdate }) {
         <Card.Title>{climbObj.name}</Card.Title>
         <Card.Text>{climbObj.grade}</Card.Text>
         <Button onClick={toggleFavorite}><span>{climbObj.favorite ? '❤️' : '🤍'}</span></Button>
-        <Card.Text>Date Created: </Card.Text>
+        <Card.Text>{climbObj.timeStamp ? new Date(climbObj.timeStamp).toString().split(' G')[0] : ''}</Card.Text>
         {/* DYNAMIC LINK TO VIEW THE CLIMB DETAILS  */}
         <Link href={`/climbs/${climbObj.firebaseKey}`} passHref>
           <Button variant="primary" className="m-2">VIEW</Button>
@@ -51,6 +50,7 @@ ClimbCard.propTypes = {
     favorite: PropTypes.bool,
     sent: PropTypes.bool,
     grade: PropTypes.string,
+    timeStamp: PropTypes.string,
     firebaseKey: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,

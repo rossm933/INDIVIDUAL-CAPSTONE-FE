@@ -42,7 +42,7 @@ function ClimbForm({ obj }) {
     if (obj.firebaseKey) {
       updateClimb(formInput).then(() => router.push('/'));
     } else {
-      const payload = { ...formInput, uid: user.uid };
+      const payload = { ...formInput, uid: user.uid, timeStamp: Date.now() };
       createClimb(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateClimb(patchPayload).then(() => {
