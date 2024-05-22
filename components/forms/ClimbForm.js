@@ -14,6 +14,7 @@ const initialState = {
   location: '',
   grade: '',
   favorite: false,
+  sent: false,
 };
 
 function ClimbForm({ obj }) {

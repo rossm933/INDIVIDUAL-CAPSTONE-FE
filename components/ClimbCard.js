@@ -32,10 +32,9 @@ function ClimbCard({ climbObj, onUpdate }) {
     <Card style={{ width: '18rem', margin: '10px' }}>
       <Card.Img variant="top" src={climbObj.image} alt={climbObj.name} style={{ height: '400px' }} />
       <Card.Body>
-        <Card.Title>Name: {climbObj.name}</Card.Title>
+        <Card.Title><Button onClick={toggleFavorite}><span>{climbObj.favorite ? '❤️' : '🤍'}</span></Button> Name: {climbObj.name}</Card.Title>
         <Button onClick={toggleSent}><span>Sent? {climbObj.sent ? 'Yes' : 'No'}</span></Button>
         <Card.Text>Grade: {climbObj.grade}</Card.Text>
-        <Button onClick={toggleFavorite}><span>{climbObj.favorite ? '❤️' : '🤍'}</span></Button>
         <Card.Text>Date Created: {climbObj.timeStamp ? new Date(climbObj.timeStamp).toString().split(' G')[0] : ''}</Card.Text>
         {/* DYNAMIC LINK TO VIEW THE CLIMB DETAILS  */}
         <Link href={`/climbs/${climbObj.firebaseKey}`} passHref>
