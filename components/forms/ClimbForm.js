@@ -38,20 +38,6 @@ function ClimbForm({ obj }) {
     }));
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   if (obj.firebaseKey) {
-  //     updateClimb(formInput).then(() => router.push('/'));
-  //   } else {
-  //     const payload = { ...formInput, uid: user.uid, timeStamp: Date.now() };
-  //     createClimb(payload).then(({ name }) => {
-  //       const patchPayload = { firebaseKey: name };
-  //       updateClimb(patchPayload).then(() => {
-  //         router.push('/');
-  //       });
-  //     });
-  //   }
-  // };
   const handleSubmit = (e) => {
     e.preventDefault();
     if (obj.firebaseKey) {
