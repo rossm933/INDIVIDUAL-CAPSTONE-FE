@@ -23,7 +23,7 @@ function Home() {
   return (
     <div className="text-center my-4">
       <Link href="/climbs/new" passHref>
-        <Button>Add A Climb</Button>
+        <Button style={{ background: '#B38B6D', border: 'solid 1px black' }}>Add A Climb</Button>
       </Link>
       <div className="d-flex flex-wrap">
         {/* TODO: map over climbs here using ClimbCard component */}

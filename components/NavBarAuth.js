@@ -6,9 +6,9 @@ import {
 } from 'react-bootstrap';
 import { signOut } from '../utils/auth';
 
-export default function NavBarAuth() {
+function NavBarAuth() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar style={{ background: '#ff8c00', font: 'bold' }} collapseOnSelect expand="lg">
       <Container>
         <Link passHref href="/">
           <Navbar.Brand>SEND!</Navbar.Brand>
@@ -26,13 +26,17 @@ export default function NavBarAuth() {
             <Link passHref href="/futureClimbs">
               <Nav.Link>Future Climbs</Nav.Link>
             </Link>
+          </Nav>
+          <Nav>
             <Link passHref href="/profile">
-              <Nav.Link>Profile</Nav.Link>
+              <Nav.Link id="right-nav">Profile</Nav.Link>
             </Link>
-            <Button variant="danger" onClick={signOut}>Sign Out</Button>
+            <Button id="right-nav" variant="danger" style={{ background: '#8b0000', border: 'solid 1px black' }} onClick={signOut}>Sign Out</Button>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 }
+
+export default NavBarAuth;
