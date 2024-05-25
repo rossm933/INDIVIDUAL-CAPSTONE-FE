@@ -41,13 +41,23 @@ function ClimbForm({ obj }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (obj.firebaseKey) {
-      updateClimb(formInput).then(() => router.push('/'));
+      updateClimb(formInput).then(() => {
+        if (obj.sent === true) {
+          router.push('/');
+        } else {
+          router.push('/futureClimbs');
+        }
+      });
     } else {
       const payload = { ...formInput, uid: user.uid, timeStamp: Date.now() };
       createClimb(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateClimb(patchPayload).then(() => {
-          router.push('/');
+          if (obj.sent === true) {
+            router.push('/');
+          } else {
+            router.push('/futureClimbs');
+          }
         });
       });
     }
@@ -152,6 +162,7 @@ ClimbForm.propTypes = {
     description: PropTypes.string,
     location: PropTypes.string,
     grade: PropTypes.string,
+    sent: PropTypes.bool,
     firebaseKey: PropTypes.string,
   }),
 };
