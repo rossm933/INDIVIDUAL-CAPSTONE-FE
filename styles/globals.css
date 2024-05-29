@@ -27,7 +27,8 @@ body {
  justify-content: flex-end;
 }
 
-#climb-card {
+#card-container {
   display: flex;
   justify-content: center;
+  align-items: center;
 }

@@ -19,7 +19,7 @@ export default function ViewFutureClimbs() {
   // const user = { displayName: 'Dr. T' }; // TODO: COMMENT OUT FOR AUTH
   return (
     <div className="text-center my-4">
-      <div className="d-flex flex-wrap">
+      <div className="d-flex flex-wrap justify-content-center align-items-center">
         {/* TODO: map over climbs here using ClimbCard component */}
         {filteredClimbs.map((climb) => (
           <ClimbCard key={climb.firebaseKey} climbObj={climb} onUpdate={getAllTheClimbs} />

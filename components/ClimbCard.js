@@ -29,16 +29,8 @@ function ClimbCard({ climbObj, onUpdate }) {
   };
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '100vh', // Ensures the wrapper takes up the full viewport height
-      }}
-    >
+    <div>
       <Card
-        id="climb-card"
         style={{
           width: '18rem', margin: '10px', border: 'solid 5px black', background: '#D4D4D4',
         }}

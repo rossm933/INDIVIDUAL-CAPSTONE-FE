@@ -25,7 +25,7 @@ function Home() {
       <Link href="/climbs/new" passHref>
         <Button style={{ background: '#B38B6D', border: 'solid 1px black' }}>Add A Climb</Button>
       </Link>
-      <div className="d-flex flex-wrap">
+      <div className="d-flex flex-wrap justify-content-center align-items-center">
         {/* TODO: map over climbs here using ClimbCard component */}
         {filteredClimbs.map((climb) => (
           <ClimbCard key={climb.firebaseKey} climbObj={climb} onUpdate={getAllTheClimbs} />
