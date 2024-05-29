@@ -20,8 +20,8 @@ SEND! is an application that allows a user to view climbs they have sent and cre
 - The user can see details of each climb by clicking the view button which includes: description, grade, image, name, and location of the climb
 
 
-## Video Walkthrough of SEND! <!-- A loom link is sufficient -->
-https://www.loom.com/share/829b90d831ea441ba2db6bea724af210
+## Video Walkthrough of SEND!
+https://www.loom.com/share/0f7e30991c3f4f0a876511819b2c3a0e?sid=fe783084-9e3b-474f-ae76-5238403d84d3
 
 ## Relevant Links
 - [Check out the deployed site](#your-link)

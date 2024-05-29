@@ -15,11 +15,13 @@ export default function ViewClimb() {
   }, [firebaseKey]);
 
   return (
-    <div className="mt-5 d-flex flex-wrap">
+    <div
+      className="mt-5 d-flex flex-wrap"
+    >
       <div className="d-flex flex-column">
-        <img src={climbDetails.image} alt={climbDetails.name} style={{ width: '300px' }} />
+        <img src={climbDetails.image} alt={climbDetails.name} style={{ width: '300px', border: 'solid 2px black' }} />
       </div>
-      <div className="text-white ms-5 details">
+      <div className="text-black ms-5 details">
         <h5>
           Name: {climbDetails.name}
         </h5>

@@ -7,7 +7,10 @@ export default function UserCard() {
   const { user } = useAuth();
   console.warn(user);
   return (
-    <Card style={{ width: '18rem', margin: '10px' }}>
+    <Card style={{
+      width: '18rem', margin: '10px', border: 'solid 5px black', background: '#D4D4D4',
+    }}
+    >
       <Card.Img variant="top" src={user.photoURL} style={{ height: '250px' }} />
       <Card.Body>
         <Card.Title>{user.displayName}</Card.Title>
