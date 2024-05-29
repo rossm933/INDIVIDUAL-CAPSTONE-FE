@@ -65,7 +65,7 @@ function ClimbForm({ obj }) {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <h2 style={{ color: 'black' }}>{obj.firebaseKey ? 'Update' : 'Create'} Player</h2>
+      <h2 style={{ color: 'black' }}>{obj.firebaseKey ? 'Update' : 'Create'} Climb</h2>
 
       {/* Name INPUT  */}
       <FloatingLabel controlId="floatingInput1" label="Name of Climb" className="mb-3">
