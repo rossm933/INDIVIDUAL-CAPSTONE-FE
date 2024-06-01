@@ -41,11 +41,9 @@ function ClimbCard({ climbObj, onUpdate }) {
           <Button style={{ background: '#B38B6D', border: 'solid 1px black' }} onClick={toggleSent}><span>Sent? {climbObj.sent ? 'Yes' : 'No'}</span></Button>
           <Card.Text>{climbObj.grade}</Card.Text>
           <Card.Text>Date Created: {climbObj.timeStamp ? new Date(climbObj.timeStamp).toString().split(' G')[0] : ''}</Card.Text>
-          {/* DYNAMIC LINK TO VIEW THE CLIMB DETAILS  */}
           <Link href={`/climbs/${climbObj.firebaseKey}`} passHref>
             <Button style={{ background: '#B38B6D', border: 'solid 1px black' }} variant="primary" className="m-2">VIEW</Button>
           </Link>
-          {/* DYNAMIC LINK TO EDIT THE CLIMB DETAILS  */}
           <Link href={`/climbs/edit/${climbObj.firebaseKey}`} passHref>
             <Button style={{ background: '#B38B6D', border: 'solid 1px black' }} variant="info">EDIT</Button>
           </Link>

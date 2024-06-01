@@ -6,7 +6,7 @@ import { useAuth } from '../utils/context/authContext';
 export default function ViewFutureClimbs() {
   const [climbs, setClimbs] = useState([]);
 
-  const { user } = useAuth(); // TODO: COMMENT IN FOR AUTH
+  const { user } = useAuth();
 
   const getAllTheClimbs = () => {
     getClimbs(user.uid).then(setClimbs);
@@ -16,11 +16,9 @@ export default function ViewFutureClimbs() {
     getAllTheClimbs();
   }, []);
   const filteredClimbs = climbs.filter((climb) => climb.sent === false);
-  // const user = { displayName: 'Dr. T' }; // TODO: COMMENT OUT FOR AUTH
   return (
     <div className="text-center my-4">
       <div className="d-flex flex-wrap justify-content-center align-items-center">
-        {/* TODO: map over climbs here using ClimbCard component */}
         {filteredClimbs.map((climb) => (
           <ClimbCard key={climb.firebaseKey} climbObj={climb} onUpdate={getAllTheClimbs} />
         ))}
