@@ -6,10 +6,8 @@ export default function ViewClimb() {
   const [climbDetails, setClimbDetails] = useState({});
   const router = useRouter();
 
-  // TODO: grab firebaseKey from url
   const { firebaseKey } = router.query;
 
-  // TODO: make call to API layer to get the data
   useEffect(() => {
     getSingleClimb(firebaseKey).then(setClimbDetails);
   }, [firebaseKey]);
