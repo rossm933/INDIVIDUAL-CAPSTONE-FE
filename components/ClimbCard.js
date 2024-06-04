@@ -63,7 +63,7 @@ ClimbCard.propTypes = {
     favorite: PropTypes.bool,
     sent: PropTypes.bool,
     grade: PropTypes.string,
-    timeStamp: PropTypes.string,
+    timeStamp: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     firebaseKey: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
