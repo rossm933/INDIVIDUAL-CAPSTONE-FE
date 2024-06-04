@@ -5,6 +5,7 @@ import {
   Navbar, Container, Nav, Button,
 } from 'react-bootstrap';
 import { signOut } from '../utils/auth';
+import SearchBar from './SearchBar';
 
 function NavBarAuth() {
   return (
@@ -26,6 +27,7 @@ function NavBarAuth() {
               <Nav.Link>Future Climbs</Nav.Link>
             </Link>
           </Nav>
+          <SearchBar />
           <Nav>
             <Link passHref href="/profile">
               <Nav.Link id="right-nav">Profile</Nav.Link>
