@@ -22,11 +22,13 @@ export default function Search() {
   }, [searchInput, user.uid]);
 
   return (
-    <div className="d-flex flex-wrap">
-      {searchResults.length === 0
-        ? (<h1>No climbs found.</h1>)
-        : (searchResults.map((results) => (
-          <ClimbCard key={results.firebaseKey} climbObj={results} onUpdate={getSearchResults} />)))}
+    <div className="text-center my-4">
+      <div className="d-flex flex-wrap justify-content-center align-items-center">
+        {searchResults.length === 0
+          ? (<h1>No climbs found.</h1>)
+          : (searchResults.map((results) => (
+            <ClimbCard key={results.firebaseKey} climbObj={results} onUpdate={getSearchResults} />)))}
+      </div>
     </div>
   );
 }
