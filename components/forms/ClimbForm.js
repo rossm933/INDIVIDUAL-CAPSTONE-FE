@@ -67,7 +67,6 @@ function ClimbForm({ obj }) {
     <Form onSubmit={handleSubmit}>
       <h2 style={{ color: 'black' }}>{obj.firebaseKey ? 'Update' : 'Create'} Climb</h2>
 
-      {/* Name INPUT  */}
       <FloatingLabel controlId="floatingInput1" label="Name of Climb" className="mb-3">
         <Form.Control
           type="text"
@@ -79,7 +78,6 @@ function ClimbForm({ obj }) {
         />
       </FloatingLabel>
 
-      {/* IMAGE INPUT  */}
       <FloatingLabel controlId="floatingInput2" label="Picture of Climb" className="mb-3">
         <Form.Control
           type="url"
@@ -91,7 +89,6 @@ function ClimbForm({ obj }) {
         />
       </FloatingLabel>
 
-      {/* DESCRIPTION INPUT  */}
       <FloatingLabel controlId="floatingInput1" label="Description" className="mb-3">
         <Form.Control
           type="text"
@@ -103,7 +100,6 @@ function ClimbForm({ obj }) {
         />
       </FloatingLabel>
 
-      {/* Location INPUT  */}
       <FloatingLabel controlId="floatingInput1" label="Location" className="mb-3">
         <Form.Control
           type="text"
@@ -115,7 +111,6 @@ function ClimbForm({ obj }) {
         />
       </FloatingLabel>
 
-      {/* GRADE SELECT  */}
       <FloatingLabel controlId="floatingSelect" label="Grade">
         <Form.Select
           aria-label="Grade"
@@ -149,7 +144,6 @@ function ClimbForm({ obj }) {
         </Form.Select>
       </FloatingLabel>
 
-      {/* SUBMIT BUTTON  */}
       <Button style={{ background: '#B38B6D', border: 'solid 1px black' }} type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Climb</Button>
     </Form>
   );

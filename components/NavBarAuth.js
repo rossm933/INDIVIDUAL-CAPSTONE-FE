@@ -2,16 +2,23 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  Navbar, Container, Nav, Button,
+  Navbar, Container, Nav, Button, Image,
 } from 'react-bootstrap';
 import { signOut } from '../utils/auth';
+import SearchBar from './SearchBar';
 
 function NavBarAuth() {
   return (
     <Navbar style={{ background: '#ff8c00', font: 'bold' }} collapseOnSelect expand="lg">
       <Container>
+        <Image
+          src="/images/Logo.png"
+          height={60}
+          width={75}
+        />
         <Link passHref href="/">
-          <Navbar.Brand>SEND!</Navbar.Brand>
+          <Navbar.Brand>SEND!
+          </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -26,6 +33,7 @@ function NavBarAuth() {
               <Nav.Link>Future Climbs</Nav.Link>
             </Link>
           </Nav>
+          <SearchBar />
           <Nav>
             <Link passHref href="/profile">
               <Nav.Link id="right-nav">Profile</Nav.Link>

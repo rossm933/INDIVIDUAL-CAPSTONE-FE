@@ -64,10 +64,22 @@ const updateClimb = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const searchClimbs = async (searchValue, uid) => {
+  const allClimbs = await getClimbs(uid);
+
+  const filteredClimbs = await allClimbs.filter((climb) => (
+    climb.name.toLowerCase().includes(searchValue)
+    || climb.grade.toLowerCase().includes(searchValue)
+  ));
+
+  return filteredClimbs;
+};
+
 export {
   getClimbs,
   createClimb,
   deleteClimb,
   getSingleClimb,
   updateClimb,
+  searchClimbs,
 };
