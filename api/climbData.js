@@ -1,5 +1,4 @@
 import { clientCredentials } from '../utils/client';
-// API CALLS FOR CLIMBS
 
 const endpoint = clientCredentials.databaseURL;
 
@@ -15,7 +14,6 @@ const getClimbs = (uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-// TODO: DELETE CLIMB
 const deleteClimb = (firebaseKey) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/climbs/${firebaseKey}.json`, {
     method: 'DELETE',
@@ -28,7 +26,6 @@ const deleteClimb = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-// TODO: GET SINGLE CLIMB
 const getSingleClimb = (firebaseKey) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/climbs/${firebaseKey}.json`, {
     method: 'GET',
@@ -41,7 +38,6 @@ const getSingleClimb = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-// TODO: CREATE CLIMB
 const createClimb = (payload) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/climbs.json`, {
     method: 'POST',
@@ -55,7 +51,6 @@ const createClimb = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-// TODO: UPDATE CLIMB
 const updateClimb = (payload) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/climbs/${payload.firebaseKey}.json`, {
     method: 'PATCH',
@@ -69,10 +64,22 @@ const updateClimb = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const searchClimbs = async (searchValue, uid) => {
+  const allClimbs = await getClimbs(uid);
+
+  const filteredClimbs = await allClimbs.filter((climb) => (
+    climb.name.toLowerCase().includes(searchValue)
+    || climb.grade.toLowerCase().includes(searchValue)
+  ));
+
+  return filteredClimbs;
+};
+
 export {
   getClimbs,
   createClimb,
   deleteClimb,
   getSingleClimb,
   updateClimb,
+  searchClimbs,
 };

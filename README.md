@@ -23,13 +23,15 @@ SEND! is an application that allows a user to view climbs they have sent and cre
 ## Video Walkthrough of SEND!
 https://www.loom.com/share/0dbaccddf11740509bb98f1bcb45b916?sid=586f31b3-a46f-4c30-a636-0a990ea07cfb
 
+
 ## Relevant Links
 - [Check out the deployed site](https://sendclimbs.netlify.app)
 - [Wireframes] (https://docs.google.com/presentation/d/1dpxeQzmib42BmvDqdywn-r5aABlPVjSdy3TPu7vpkUU/edit?usp=sharing)
 - [Project Board] (https://github.com/users/rossm933/projects/3/views/1)
 - [ERD] (https://dbdiagram.io/d/CAPSTONE-FE-6642a0d69e85a46d55c05b9a)
 
-## Project Screenshots 
+
+## Project Screenshots <!-- These can be inside of your project. Look at the repos from class and see how the images are included in the readme -->
 <img width="1148" alt="screenshot1" src="images/Home-Page.png">
 <img width="1148" alt="screenshot1" src="images/Form-Page.png">
 
