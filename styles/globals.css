@@ -3,10 +3,10 @@
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-weight: bold;
-  font-family: "Copse", serif;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-weight: bold !important;
+  font-family: "Copse", serif !important;
 }
 
 a {
@@ -19,7 +19,7 @@ a {
 }
 
 body {
-  background-color: palegoldenrod;
+  background-color: palegoldenrod !important;
 }
 
 #right-nav {
