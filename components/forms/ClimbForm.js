@@ -5,7 +5,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
 import { useAuth } from '../../utils/context/authContext';
-import { getClimbs, createClimb, updateClimb } from '../../api/climbData';
+import { createClimb, updateClimb } from '../../api/climbData';
 
 const initialState = {
   name: '',
@@ -17,17 +17,14 @@ const initialState = {
   sent: true,
 };
 
-function ClimbForm({ obj }) {
+function ClimbForm({ climb }) {
   const [formInput, setFormInput] = useState(initialState);
-  const [, setPlayers] = useState([]);
   const router = useRouter();
   const { user } = useAuth();
 
   useEffect(() => {
-    getClimbs(user.uid).then(setPlayers);
-
-    if (obj.firebaseKey) setFormInput(obj);
-  }, [obj, user]);
+    if (climb.firebaseKey) setFormInput(climb);
+  }, [climb, user]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -40,9 +37,9 @@ function ClimbForm({ obj }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (obj.firebaseKey) {
+    if (climb.firebaseKey) {
       updateClimb(formInput).then(() => {
-        if (obj.sent === true) {
+        if (climb.sent === true) {
           router.push('/');
         } else {
           router.push('/futureClimbs');
@@ -53,7 +50,7 @@ function ClimbForm({ obj }) {
       createClimb(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateClimb(patchPayload).then(() => {
-          if (obj.sent === true) {
+          if (climb.sent === true) {
             router.push('/');
           } else {
             router.push('/futureClimbs');
@@ -65,7 +62,7 @@ function ClimbForm({ obj }) {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <h2 style={{ color: 'black' }}>{obj.firebaseKey ? 'Update' : 'Create'} Climb</h2>
+      <h2 style={{ color: 'black' }}>{climb.firebaseKey ? 'Update' : 'Create'} Climb</h2>
 
       <FloatingLabel controlId="floatingInput1" label="Name of Climb" className="mb-3">
         <Form.Control
@@ -144,13 +141,13 @@ function ClimbForm({ obj }) {
         </Form.Select>
       </FloatingLabel>
 
-      <Button style={{ background: '#B38B6D', border: 'solid 1px black' }} type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Climb</Button>
+      <Button style={{ background: '#B38B6D', border: 'solid 1px black' }} type="submit">{climb.firebaseKey ? 'Update' : 'Create'} Climb</Button>
     </Form>
   );
 }
 
 ClimbForm.propTypes = {
-  obj: PropTypes.shape({
+  climb: PropTypes.shape({
     name: PropTypes.string,
     image: PropTypes.string,
     description: PropTypes.string,
@@ -162,7 +159,7 @@ ClimbForm.propTypes = {
 };
 
 ClimbForm.defaultProps = {
-  obj: initialState,
+  climb: initialState,
 };
 
 export default ClimbForm;

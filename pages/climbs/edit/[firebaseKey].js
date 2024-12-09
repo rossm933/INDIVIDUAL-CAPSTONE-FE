@@ -12,5 +12,5 @@ export default function EditClimb() {
     getSingleClimb(firebaseKey).then(setEditItem);
   }, [firebaseKey]);
 
-  return (<ClimbForm obj={editItem} />);
+  return (<ClimbForm climb={editItem} />);
 }
