@@ -39,7 +39,11 @@ function ClimbForm({ climb }) {
     e.preventDefault();
     if (climb.firebaseKey) {
       updateClimb(formInput).then(() => {
-        router.push('/');
+        if (climb.sent === true) {
+          router.push('/');
+        } else {
+          router.push('/futureClimbs');
+        }
       });
     } else {
       const payload = { ...formInput, uid: user.uid, timeStamp: Date.now() };
