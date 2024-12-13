@@ -39,22 +39,14 @@ function ClimbForm({ climb }) {
     e.preventDefault();
     if (climb.firebaseKey) {
       updateClimb(formInput).then(() => {
-        if (climb.sent === true) {
-          router.push('/');
-        } else {
-          router.push('/futureClimbs');
-        }
+        router.push('/');
       });
     } else {
       const payload = { ...formInput, uid: user.uid, timeStamp: Date.now() };
       createClimb(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateClimb(patchPayload).then(() => {
-          if (climb.sent === true) {
-            router.push('/');
-          } else {
-            router.push('/futureClimbs');
-          }
+          router.push('/');
         });
       });
     }
